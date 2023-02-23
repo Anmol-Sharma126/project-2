@@ -85,5 +85,36 @@ while (True):
                     break
 
 
+                elif choice == 4:
+                    print("Loading PIN Change...")
+                    t.sleep(1.5)
 
+                    pin_new = int(input("Enter your new PIN > "))
+
+                    print("Changing PIN to", pin_new)
+                    confirm = input("Confirm? Y/N > ")
+                    if confirm in ('Y', 'y'):
+                        user_pin = pin_new
+                        print("PIN changed successfully! \n\n")
+                    else:
+                        print("Cancelling PIN change...")
+                        t.sleep(1)
+                        print("Process Cancelled!\n\n")
+
+                    break
+
+                else:
+                    print("Loading Card Return...")
+                    t.sleep(1.5)
+
+                    print("Returning your ATM Card")
+                    confirm = input("Confirm? Y/N > ")
+                    if confirm in ('Y', 'y'):
+                        print("Card returned successfully! \n\n")
+                    else:
+                        print("Cancelling process...")
+                        t.sleep(1)
+                        print("Process Cancelled!\n\n")
+
+                    break
 
